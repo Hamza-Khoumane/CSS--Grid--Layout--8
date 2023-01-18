@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  height: 200vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+h2,
+label,
+::placeholder,
+input,
+p {
+  text-transform: capitalize;
+}
+.sign-up--grid {
+  border: 3px solid red;
+  display: grid;
+  grid-template-columns: repeat(6, 15rem);
+  grid-template-areas:
+    "logo logo logo mini mini mini"
+    "desc desc desc title title title"
+    "pic pic pic email email email"
+    "pic pic pic pass pass pass"
+    "pic pic pic submit submit submit"
+    "pic pic pic google google google"
+    "pic pic pic sign sign sign";
+  gap: 2rem 3rem;
+  align-items: center;
+  place-content: center;
+  padding: 4rem;
+}
+
+.sign-up--logo {
+  grid-area: logo;
+  justify-self: center;
+}
+.sign-up--logo img {
+  height: 3rem;
+}
+
+.sign-up-descri {
+  grid-area: desc;
+}
+
+.sign-up--picture {
+  grid-area: pic;
+}
+
+.sign-up--picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.sign-up--mini-title {
+  grid-area: mini;
+
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.sign-up--title {
+  grid-area: title;
+
+  font-size: 3rem;
+}
+
+.email--fieldset,
+.pass--fieldset {
+  border: none;
+  font-size: 1.3rem;
+
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.email--fieldset {
+  grid-area: email;
+}
+
+.pass--fieldset {
+  grid-area: pass;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+  border: none;
+  outline: none;
+  background: none;
+
+  font-size: 1.6rem;
+  padding: 1.5rem 2.5rem;
+  border-radius: 1rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  border: 1px solid lightgray;
+}
+
+input[type="submit"] {
+  grid-area: submit;
+
+  background-color: #242f2b;
+  color: white;
+  cursor: pointer;
+}
+
+.google--sign-up {
+  grid-area: google;
+
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+
+  background-color: #dbdffd;
+  padding: 1.5rem 2.5rem;
+  border-radius: 1rem;
+  color: #242f9b;
+}
+
+.google--sign-up,
+.sign-in--link {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.sign-in--link {
+  grid-area: sign;
+}
